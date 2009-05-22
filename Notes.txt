@@ -1,0 +1,15 @@
+I want to implement a LADSPA version of the 2D and 3D reverb models I
+developed with Jon.  But I'd better try walking before flying: a simple gain
+control with a range of +/-120 dB and a mute button would be a good starting
+point.
+
+OK, enhanced gain control (mono and stereo) done, but only by basing heavily
+on existing code, and even then I had a fair number of segfaults!  C is
+perhaps not the right language to be writing DSP in.
+
+--
+
+2007-10-05
+
+I now have a mono and stereo gain, a pan (mono in, stereo out) and balance (stereo in, stereo out).  Also a partially implemented level meter plugin (only with peak and trough levels per 
+LADSPA buffer at the moment; to add RMS level, crest factor, and tunable window size (should be at least 30 ms, probably)).
